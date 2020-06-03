@@ -54,20 +54,6 @@ const config = {
   
     return await batch.commit();
   };
-
-  const convertCollectionsSnapshotToMa = (collections) => {
-const transformedCollection = collections.docs.map(doc => {
-  const { title, items } = doc.datta();
-
-  return {
-    routeName: encodeURI(title.toLowerCase()),
-    id: doc.id,
-    title,
-    items
-  }
-});
-console.log(transformedCollection);
-  };
   
   export const convertCollectionsSnapshotToMap = collections => {
     const transformedCollection = collections.docs.map(doc => {
