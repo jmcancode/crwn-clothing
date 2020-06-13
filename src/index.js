@@ -8,6 +8,7 @@ import { store, persistor } from './redux/store';
 
 import './index.css';
 import App from './App';
+import { register } from './sw.js';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -19,3 +20,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+register();
